@@ -1,23 +1,14 @@
 import React from "react";
+import Cronometro from "./Cronometro";
 
 //include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+
 
 //create your first component
-const Home = (props) => {
+const Home = () => {
 	return (
-		<div className=" text-center">
-            <h1>Contador</h1>
-			
-			<div>
-              {props.digDos}
-			</div>
-
-			<div>
-              {props.digUno}
-			</div>
-
-			
+		<div>
+            <Cronometro/>
 		</div>
 	);
 };
