@@ -1,6 +1,27 @@
 import React from "react";
 
 let Cronometro = (props) => {
+
+    // let cuentaRegresiva = document.getElementById("numero");
+    // let boton= document.getElementById("enviar")
+
+    // function regresiva(){
+    //     let cuenta = parseInt(cuentaRegresiva.value);
+    //     setInterval(()=>{
+    //     let inicio = cuenta;
+    //     inicio --;
+    
+    //     if (numero === 0 ){
+    //         alert ("elige un número mayor a 0")
+    //     } else {
+    //         return cuenta
+    //     }
+    // } )
+        
+    // }
+
+    // boton.addEventListener("click", regresiva );
+    
     return (
         <div className="container text-center">
             <div className="row bg-dark" style={{ width: "70rem", height: "10rem" }}>
@@ -13,14 +34,15 @@ let Cronometro = (props) => {
                 <div className="col text-warning" style={{ fontSize: "80px" }}>{props.digUno}</div>
             </div>
 
-            {/* <div className="input-group mb-3">
-                <button className="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
-                <input type="text" className="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-            </div> */}
+            <form className="formulario">
+                    <p><b>Ingresa un Número:</b></p>
+                    <input type="text" name="number" id="numero"/>
+                        <button type="button" className="btn btn-warning" id="enviar">Inicio</button>
+            </form>
 
 
-        </div>
-    )
+                        </div>
+                        )
 };
 
-export default Cronometro;
+                        export default Cronometro;

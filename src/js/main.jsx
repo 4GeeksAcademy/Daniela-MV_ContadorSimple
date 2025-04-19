@@ -26,7 +26,7 @@ conteo ++;
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Cronometro digUno = {primeraCasilla} digDos={segundaCasilla} digTres = {terceraCasilla} digCuatro = {cuartaCasilla} digCinco = {quintaCasilla} digSeis = {sextaCasilla}/>,
-    <Home/>
+    {/* <Home/> */}
   </React.StrictMode>,
 )
 }, 1000);
