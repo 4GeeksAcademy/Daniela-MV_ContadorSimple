@@ -1,26 +1,6 @@
 import React from "react";
 
 let Cronometro = (props) => {
-
-    // let cuentaRegresiva = document.getElementById("numero");
-    // let boton= document.getElementById("enviar")
-
-    // function regresiva(){
-    //     let cuenta = parseInt(cuentaRegresiva.value);
-    //     setInterval(()=>{
-    //     let inicio = cuenta;
-    //     inicio --;
-    
-    //     if (numero === 0 ){
-    //         alert ("elige un número mayor a 0")
-    //     } else {
-    //         return cuenta
-    //     }
-    // } )
-        
-    // }
-
-    // boton.addEventListener("click", regresiva );
     
     return (
         <div className="container text-center">
@@ -37,7 +17,7 @@ let Cronometro = (props) => {
             <form className="formulario">
                     <p><b>Ingresa un Número:</b></p>
                     <input type="text" name="number" id="numero"/>
-                        <button type="button" className="btn btn-warning" id="enviar">Inicio</button>
+                        <button type="button" className="btn btn-warning" id="enviar">{props.button}Inicio</button>
             </form>
 
 

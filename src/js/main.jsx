@@ -31,3 +31,20 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 }, 1000);
 
+let cuentaRegresiva = document.getElementById("numero");
+    let boton= document.getElementById("enviar")
+    function regresiva(){
+         let cuenta = parseInt(cuentaRegresiva.value);
+         setInterval(()=>{
+         let inicio = cuenta;
+         inicio --;
+         if (numero === 0 ){
+             alert ("elige un número mayor a 0")
+         } else {
+             return cuenta
+         }
+     } )
+     
+     }
+     let button = boton.addEventListener("click", regresiva );
+
