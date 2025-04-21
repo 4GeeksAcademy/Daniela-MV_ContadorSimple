@@ -10,7 +10,14 @@ import '../styles/index.css'
 
 // components
 import Home from './components/Home';
-import Cronometro from './components/Cronometro';
+
+// let button= document.getElementById("enviar")
+// function Contador(){
+//   const [contador, setContador] = useState("");
+//   setContador(contador-1);
+// }
+
+// button.addEventListener("click", Contador);
 
 let conteo = 0;
 setInterval(() => {
@@ -25,26 +32,10 @@ conteo ++;
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Cronometro digUno = {primeraCasilla} digDos={segundaCasilla} digTres = {terceraCasilla} digCuatro = {cuartaCasilla} digCinco = {quintaCasilla} digSeis = {sextaCasilla}/>,
-    {/* <Home/> */}
+    <Home digUno = {primeraCasilla} digDos={segundaCasilla} digTres = {terceraCasilla} digCuatro = {cuartaCasilla} digCinco = {quintaCasilla} digSeis = {sextaCasilla}/>
   </React.StrictMode>,
 )
 }, 1000);
 
-let cuentaRegresiva = document.getElementById("numero");
-    let boton= document.getElementById("enviar")
-    function regresiva(){
-         let cuenta = parseInt(cuentaRegresiva.value);
-         setInterval(()=>{
-         let inicio = cuenta;
-         inicio --;
-         if (numero === 0 ){
-             alert ("elige un número mayor a 0")
-         } else {
-             return cuenta
-         }
-     } )
-     
-     }
-     let button = boton.addEventListener("click", regresiva );
+
 
