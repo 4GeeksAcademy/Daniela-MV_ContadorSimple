@@ -11,16 +11,17 @@ import '../styles/index.css'
 // components
 import Home from './components/Home';
 
-// let button= document.getElementById("enviar")
-// function Contador(){
-//   const [contador, setContador] = useState("");
-//   setContador(contador-1);
-// }
 
-// button.addEventListener("click", Contador);
 
 let conteo = 0;
-setInterval(() => {
+let esReverso = false  
+function cuentaRegresiva(numero) {
+conteo = numero;
+esReverso = true;
+}
+
+
+let contador = setInterval(() => {
 let primeraCasilla = Math.floor((conteo/1) %10);
 let segundaCasilla = Math.floor((conteo/10) %10);
 let terceraCasilla = Math.floor((conteo/100) %10);
@@ -28,14 +29,23 @@ let cuartaCasilla = Math.floor((conteo/1000) %10);
 let quintaCasilla = Math.floor((conteo/10000) %10);
 let sextaCasilla = Math.floor((conteo/100000) %10);
 
-conteo ++;
+if (esReverso === false){
+  conteo ++;
+} else{
+  conteo --;
+}
+
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Home digUno = {primeraCasilla} digDos={segundaCasilla} digTres = {terceraCasilla} digCuatro = {cuartaCasilla} digCinco = {quintaCasilla} digSeis = {sextaCasilla}/>
+ <React.StrictMode>
+    <Home digUno = {primeraCasilla} digDos={segundaCasilla} digTres = {terceraCasilla} digCuatro = {cuartaCasilla} digCinco = {quintaCasilla} digSeis = {sextaCasilla} cuentaRegresiva ={cuentaRegresiva} />
   </React.StrictMode>,
 )
 }, 1000);
+
+
 
 
 
